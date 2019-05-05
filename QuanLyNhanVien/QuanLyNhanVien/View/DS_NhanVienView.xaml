@@ -4,7 +4,7 @@
              x:Class="QuanLyNhanVien.View.DS_NhanVienView">
     <ContentPage.Content>
         <StackLayout Margin="5">
-            <ListView ItemsSource="{Binding DSNhanVien}" x:Name="ListViewDS_NhanVien" ItemSelected="ListViewDS_NhanVien_OnItemSelected">
+            <ListView ItemsSource="{Binding DSNhanVien, Mode=TwoWay}" x:Name="ListViewDS_NhanVien" ItemSelected="ListViewDS_NhanVien_OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -26,6 +26,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Label Text="{Binding ItemCount}" HorizontalOptions="End" FontAttributes="Bold"/>
             <Button Text="Thêm nhân viên" CornerRadius="25" BackgroundColor="Blue" TextColor="White" x:Name="ButtonThem" Clicked="ButtonThem_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>

@@ -11,7 +11,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
 
-            MainPage = new DS_NhanVienView();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

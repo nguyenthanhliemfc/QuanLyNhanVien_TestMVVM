@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuanLyNhanVien.View.ChiTietNhanVienView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Margin="5">
+            <Label Text="Thêm nhân viên!" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Họ và Tên:"/>
+            <Entry Text="{Binding NhanVien.HoVaTen, Mode=TwoWay}"/>
+            <Label Text="Tuổi:"/>
+            <Entry Text="{Binding NhanVien.Tuoi, Mode=TwoWay}" />
+            <Label Text="Địa chỉ:"/>
+            <Entry Text="{Binding NhanVien.DiaChi, Mode=TwoWay}" />
+            <Button Text="Xóa" CornerRadius="25" BackgroundColor="Blue" TextColor="White" Command="{Binding Xoa}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
