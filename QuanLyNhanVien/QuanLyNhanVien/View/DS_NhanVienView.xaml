@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuanLyNhanVien.View.DS_NhanVienView">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <ListView ItemsSource="{Binding DSNhanVien}" x:Name="ListViewDS_NhanVien" ItemSelected="ListViewDS_NhanVien_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout>
+                                    <Label Text="Họ và Tên:"/>
+                                    <Label Text="{Binding HoVaTen}"  Margin="10,0,0,0" FontAttributes="Italic"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Tuổi"/>
+                                    <Label Text="{Binding Tuoi}"  Margin="10,0,0,0" FontAttributes="Italic"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Địa chỉ"/>
+                                    <Label Text="{Binding DiaChi}" Margin="10,0,0,0" FontAttributes="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Thêm nhân viên" CornerRadius="25" BackgroundColor="Blue" TextColor="White" x:Name="ButtonThem" Clicked="ButtonThem_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
